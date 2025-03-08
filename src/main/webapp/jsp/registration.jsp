@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<div class="form-box">
+    <jsp:include page="<%=MENU_JSP%>"/>
+    <img class="default-image" src="<%=BACKGROUND_IMG%>">
+    <div class="form-box">
     <h2>Registration</h2>
     <form action="<%=REGISTRATION_CONTROLLER%>" method="post">
         <input name="<%=NAME_PARAM%>" placeholder="Name" required>
