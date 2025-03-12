@@ -1,5 +1,6 @@
 package by.itclass.controllers;
 
+import by.itclass.model.services.TvService;
 import by.itclass.model.services.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -12,11 +13,14 @@ import static by.itclass.constants.Constants.MESSAGE_ATTR;
 
 public abstract class AbstractController extends HttpServlet {
     protected UserService userService;
+    protected TvService tvService;
 
     @Override
     public void init() throws ServletException {
-       userService = UserService.getInstance();
+        userService = UserService.getInstance();
+        tvService = TvService.getInstance();
     }
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
