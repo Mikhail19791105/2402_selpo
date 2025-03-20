@@ -155,3 +155,100 @@ body {
     margin: 0 25px;
     cursor: pointer;
 }
+
+/*стили для корзины*/
+.cart-item-container {
+    height: 90px;
+}
+
+.cart-img {
+    height: 70px;
+    float: left;
+    border: 1px solid black;
+    margin: 5px 50px 10px 0;
+}
+
+.cart-text {
+    margin: 0 0 10px;
+}
+
+.cart-item-container input[type=submit] {
+    width: 140px;
+    background-color: forestgreen;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*стили для изминения колличества*/
+.chang-number {
+    background-color: forestgreen;
+    color: white;
+    boror-radius: 2em;
+    padding: 0.5em 0.8em;
+    width: 28px;
+    cursor: pointer;
+}
+
+.cart-item-container form {
+    display: inline-block;
+}
+
+.number-input {
+    display: inline-flex;
+}
+
+.number-input button {
+    background-color: white;
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.number-input button:before,
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: black;
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+    max-width: 3rem;
+    padding: .5rem;
+    border: none;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    foont-weight: bold;
+    text-align: center;
+}
+
+.order-container {
+    width: 600px;
+    text-align: center;
+}
+
+.order-container input {
+    width: 600px;
+    padding: 5px 0;
+    margin: 15px 0;
+}
+
+.order-container input[type=submit] {
+    width: 150px;
+    background-color: forestgreen;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

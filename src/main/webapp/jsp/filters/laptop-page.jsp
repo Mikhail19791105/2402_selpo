@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="static by.itclass.constants.Constants.*" %>
+<%@ page import="static by.itclass.constants.Constants.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -24,7 +24,7 @@
                     <input type="hidden" name="<%=ITEM_ID_PARAM%>" value="${laptop.id}">
                     <input type="hidden" name="<%=ITEM_VENDOR_PARAM%>" value="${laptop.vendor}">
                     <input type="hidden" name="<%=ITEM_MODEL_PARAM%>" value="${laptop.model}">
-                    <input type="hidden" name="<%=ITEM_PRICE_PARAM%>" value="${laptop.prise}">
+                    <input type="hidden" name="<%=ITEM_PRICE_PARAM%>" value="${laptop.price}">
                     <input type="hidden" name="<%=QUANTITY_PARAM%>" value="1">
                     <input type="submit" value="Add to Cart">
                 </form>

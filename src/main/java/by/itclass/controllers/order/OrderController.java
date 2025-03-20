@@ -1,4 +1,4 @@
-package by.itclass.controllers.user;
+package by.itclass.controllers.order;
 
 import by.itclass.controllers.AbstractController;
 import jakarta.servlet.ServletException;
@@ -8,15 +8,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static by.itclass.constants.Constants.INDEX_JSP;
-import static by.itclass.constants.Constants.LOGOUT_CONTROLLER;
+import static by.itclass.constants.Constants.*;
 
-@WebServlet(LOGOUT_CONTROLLER)
-public class LogoutController extends AbstractController {
+@WebServlet(ORDER_CONTROLLER)
+public class OrderController extends AbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        var address = req.getParameter(ADDRESS_PARAM);
         var session = req.getSession();
-        session.invalidate();
-        redirect(resp,INDEX_JSP);
+        if (orderService.saveOrder(session, address)) {
+            forward(req, resp, HOME_JSP);
+        } else {
+            forward(req, resp, CART_JSP, "Order wasn't saved");
+        }
     }
 }

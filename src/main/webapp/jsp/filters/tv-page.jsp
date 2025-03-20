@@ -24,7 +24,7 @@
                     <input type="hidden" name="<%=ITEM_ID_PARAM%>" value="${tv.id}">
                     <input type="hidden" name="<%=ITEM_VENDOR_PARAM%>" value="${tv.vendor}">
                     <input type="hidden" name="<%=ITEM_MODEL_PARAM%>" value="${tv.model}">
-                    <input type="hidden" name="<%=ITEM_PRICE_PARAM%>" value="${tv.prise}">
+                    <input type="hidden" name="<%=ITEM_PRICE_PARAM%>" value="${tv.price}">
                     <input type="hidden" name="<%=QUANTITY_PARAM%>" value="1">
                     <input type="submit" value="Add to Cart">
                 </form>
