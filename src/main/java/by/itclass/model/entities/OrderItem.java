@@ -32,6 +32,7 @@ public class OrderItem {
     public int hashCode() {
         int result = orderId != null ? orderId.hashCode() : 0;
         result = 31 * result + itemType;
+        result = 31 * result + itemId;
         return result;
     }
 }

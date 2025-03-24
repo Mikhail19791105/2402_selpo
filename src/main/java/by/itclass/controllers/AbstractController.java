@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static by.itclass.constants.Constants.MESSAGE_ATTR;
+import static by.itclass.constants.Constants.*;
 
 public abstract class AbstractController extends HttpServlet {
     protected UserService userService;

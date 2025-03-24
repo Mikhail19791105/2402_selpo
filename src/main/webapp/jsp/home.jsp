@@ -8,8 +8,11 @@
 </head>
 <body>
     <jsp:include page="<%=MENU_JSP%>"/>
+    <h2>Hello ${user.name}</h2>
+    <c:if test="${not empty message}">
+        <h2>${message}</h2>
+    </c:if>
     <jsp:include page="<%=SLIDER%>"/>
     <script src="/jsp/slider.js"></script>
-
 </body>
 </html>

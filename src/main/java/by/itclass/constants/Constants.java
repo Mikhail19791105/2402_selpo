@@ -22,12 +22,15 @@ public class Constants {
     public static final String ITEM_PRICE_PARAM = "itemPrice";
     public static final String QUANTITY_PARAM = "quantity";
     public static final String ADDRESS_PARAM = "address";
+    public static final String DATE_PARAM = "date";
 
     public static final String MESSAGE_ATTR = "message";
     public static final String USER_ATTR = "user";
     public static final String TVS_ATTR = "tvs";
     public static final String LAPTOPS_ATTR = "laptops";
     public static final String ORDER_ITEMS_ATTR = "orderItems";
+    public static final String ORDER_ID_ATTR = "orderId";
+    public static final String ORDERS_ATTR = "orders";
 
     public static final String LOGIN_CONTROLLER = "/login";
     public static final String LOGOUT_CONTROLLER = "/logout";
@@ -36,6 +39,8 @@ public class Constants {
     public static final String LAPTOP_CONTROLLER = "/laptop";
     public static final String CART_CONTROLLER = "/cart";
     public static final String ORDER_CONTROLLER = "/order";
+    public static final String ORDERS_HISTORY_CONTROLLER = "/orderHistory";
+    public static final String PRINT_ORDER_CONTROLLER = "/printOrder";
 
 
 
@@ -47,11 +52,10 @@ public class Constants {
     public static final String TV_PAGE_JSP = "/jsp/filters/tv-page.jsp";
     public static final String LAPTOP_PAGE_JSP = "/jsp/filters/laptop-page.jsp";
     public static final String CART_JSP = "/jsp/cart.jsp";
+    public static final String ORDERS_JSP = "/jsp/orders.jsp";
 
     public static final String BACKGROUND_IMG = "/img/background-img.jpg";
     public static final String SLIDER = "/jsp/slider/slider.html";
     public static final String TV_FILTER = "/jsp/filters/tv-filter.html";
     public static final String LAPTOP_FILTER = "/jsp/filters/laptop-filter.html";
-
-
 }

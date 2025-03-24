@@ -3,29 +3,33 @@
     position: absolute;
     background-color: lightgray;
     width: 300px;
-    border: 10px solid greenyellow;
+    border: 10px solid green;
     padding: 50px;
     margin: 20px;
     top: 30%;
     left: 35%;
 }
+
 input {
     width: 200px;
     padding: 5px;
     margin: 5px;
 }
+
 input[type=submit] {
     width: 120px;
-    background-color: #8fe8de;
+    background-color: green;
     border: none;
     color: white;
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
 }
+
 .error {
     color: red;
 }
+
 .nav-ul {
     list-style-type: none;
     margin: 0;
@@ -33,28 +37,35 @@ input[type=submit] {
     overflow: hidden;
     background-color: gray;
 }
+
 .nav-li {
     float: right;
 }
+
 .nav-li.float-left {
     float: left;
 }
+
 .nav-li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
 }
+
 .nav-li a:hover:not(.active) {
     background-color: dimgray;
 }
+
 .active {
     background-color: forestgreen;
 }
+
 .default-image {
     width: 100%;
     opacity: 0.5;
 }
+
 body {
     margin: 0;
 }
@@ -63,15 +74,18 @@ body {
 .slides {
     display: none;
 }
+
 .slideshow-container {
     max-width: 1250px;
     position: relative;
     margin: 50px auto;
 }
+
 .fade {
-    animation-none: fade;
+    animation-name: fade;
     animation-duration: 1.5s;
 }
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -86,6 +100,7 @@ body {
     margin: 25px;
     display: inline-block;
 }
+
 .small-image {
     width: 200px;
     display: block;
@@ -105,9 +120,11 @@ body {
     display: block;
     padding: 12px;
 }
+
 .vertical-menu a:hover {
     background-color: dimgray;
 }
+
 .vertical-menu a.active {
     background-color: forestgreen;
     color: white;
@@ -123,6 +140,7 @@ body {
     font-size: 22px;
     background-color: lightgray;
 }
+
 .filter-container input[type=checkbox] {
     position: absolute;
     cursor: pointer;
@@ -139,8 +157,9 @@ body {
     left:5px;
     top: -4px;
 }
+
 .vertical-menu input[type-submit] {
-    width: 267px;
+    width: 297px;
     font-size: 22px;
     font-family: auto;
 }
@@ -182,7 +201,7 @@ body {
 }
 
 /*стили для изминения колличества*/
-.chang-number {
+.catr-item-conainer input[type-submit].change-number {
     background-color: forestgreen;
     color: white;
     boror-radius: 2em;
@@ -233,15 +252,22 @@ body {
     text-align: center;
 }
 
+/*стили для контейнера заказа*/
 .order-container {
     width: 600px;
     text-align: center;
 }
 
+
 .order-container input {
     width: 600px;
-    padding: 5px 0;
+    display: inline-block;
     margin: 15px 0;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    transition: .5s linear;
 }
 
 .order-container input[type=submit] {
@@ -251,4 +277,22 @@ body {
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
+    margin-left: 40px;
+}
+
+/*стили для истории заказа*/
+.order-list-container {
+    background-color: lightgray;
+}
+
+.order-list-container input[type=submit] {
+    width: 200px;
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 25px;
+    margin: 0 0 20px 20px;
+    cursor: pointer;
+    border-radius:50px;
+    border-style:solid;
+    border-top-style:solid;
 }
