@@ -54,7 +54,7 @@ public class Constants {
     public static final String CART_JSP = "/jsp/cart.jsp";
     public static final String ORDERS_JSP = "/jsp/orders.jsp";
 
-    public static final String BACKGROUND_IMG = "/img/background-img.jpg";
+    public static final String BACKGROUND_IMAGE = "/img/background-img.jpg";
     public static final String SLIDER = "/jsp/slider/slider.html";
     public static final String TV_FILTER = "/jsp/filters/tv-filter.html";
     public static final String LAPTOP_FILTER = "/jsp/filters/laptop-filter.html";

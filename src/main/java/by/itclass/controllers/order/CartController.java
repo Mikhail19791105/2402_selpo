@@ -26,7 +26,7 @@ public class CartController extends AbstractController {
         var quantity = Integer.parseInt( req.getParameter(QUANTITY_PARAM));
         var item = new OrderItem(itemType,itemID,itemVendor,itemModel,itemPrice,quantity);
         var session = req.getSession();
-        var items = carService.processCart(session, cartAction, item);
+        var items = cartService.processCart(session, cartAction, item);
         session.setAttribute(ORDER_ITEMS_ATTR, items);
         if ("add".equals(cartAction)) {
             redirectToProductPage(resp, itemType);

@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="static by.itclass.constants.Constants.*" %>
+<%@ page import="static by.itclass.constants.Constants.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -9,7 +9,7 @@
 </head>
 <body>
         <jsp:include page="<%=MENU_JSP%>"/>
-        <img class="default-image" src="<%=BACKGROUND_IMG%>">
+        <img class="default-image" src="<%=BACKGROUND_IMAGE%>">
     <div class="form-box">
     <h2>Login</h2>
     <form action="<%=LOGIN_CONTROLLER%>" method="post">

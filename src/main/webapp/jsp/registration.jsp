@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="static by.itclass.constants.Constants.*" %>
+<%@ page import="static javax.swing.text.html.CSS.Attribute.BACKGROUND_IMAGE" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <title>Registration</title>
@@ -9,7 +9,7 @@
 </head>
 <body>
     <jsp:include page="<%=MENU_JSP%>"/>
-    <img class="default-image" src="<%=BACKGROUND_IMG%>">
+    <img class="default-image" src="<%=BACKGROUND_IMAGE%>">
     <div class="form-box">
     <h2>Registration</h2>
     <form action="<%=REGISTRATION_CONTROLLER%>" method="post">

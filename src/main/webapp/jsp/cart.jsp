@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="static by.itclass.constants.Constants.*" %>
+<%@ page import="static by.itclass.constants.Constants.*" %>
 <html>
 <head>
     <title>Cart Page</title>
@@ -14,7 +14,7 @@
             <c:forEach var="item" items="${orderItems}">
                 <div class="cart-item-container">
                     <img class="cart-img" src="/img/${item.itemType eq 1 ? 'tv' : 'laptop'}/${item.itemVendor}-${item.itemModel}.jpg">
-                    <h3 class="cart-text">${item.itemType eq 1 ? 'Televizor' : 'Noutbook'}${item.itemVendor} ${item.itemModel} by ${item.itemPrice} by</h3>
+                    <h3 class="cart-text">${item.itemType eq 1 ? 'Televizor' : 'Noutbook'}${item.itemVendor} ${item.itemModel} by ${item.itemPrice} byn.</h3>
 <%--                    <form method="post" action="<%=CART_CONTROLLER%>">--%>
 <%--                        <input type="hidden" name="<%=CART_ACTION_PARAM%>" value="decrease">--%>
 <%--                        <input type="hidden" name="<%=ITEM_TYPE_PARAM%>" value="${item.itemType}">--%>
@@ -48,6 +48,7 @@
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </form>
+
                     <form method="post" action="<%=CART_CONTROLLER%>">
                         <input type="hidden" name="<%=CART_ACTION_PARAM%>" value="remove">
                         <input type="hidden" name="<%=ITEM_TYPE_PARAM%>" value="${item.itemType}">

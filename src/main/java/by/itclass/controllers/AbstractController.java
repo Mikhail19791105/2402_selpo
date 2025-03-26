@@ -8,22 +8,22 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static by.itclass.constants.Constants.*;
+import static by.itclass.constants.Constants.MESSAGE_ATTR;
 
 public abstract class AbstractController extends HttpServlet {
     protected UserService userService;
     protected TvService tvService;
     protected LaptopService laptopService;
-    protected CartService carService;
+    protected CartService cartService;
     protected OrderService orderService;
 
 
     @Override
-    public void init() throws ServletException {
+    public void init() throws ServletException{
         userService = UserService.getInstance();
         tvService = TvService.getInstance();
         laptopService = LaptopService.getInstance();
-        carService = CartService.getInstance();
+        cartService = CartService.getInstance();
         orderService = OrderService.getInstance();
     }
 

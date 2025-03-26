@@ -8,6 +8,7 @@
 <body>
     <jsp:include page="<%=MENU_JSP%>"/>
     <jsp:include page="<%=SLIDER%>"/>
+    <h1 style="text-align: center">Welcome to our SELPO</h1>
     <script src="/js/slider.js"></script>
 </body>
 </html>
