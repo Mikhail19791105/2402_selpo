@@ -1,7 +1,6 @@
 package by.itclass.controllers.order;
 
 import by.itclass.controllers.abstraction.OrderAbstractController;
-import by.itclass.model.entities.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,13 +10,13 @@ import java.io.IOException;
 
 import static by.itclass.constants.Constants.*;
 
-@WebServlet(ORDERS_HISTORY_CONTROLLER)
-public class OrdersHistoryController extends OrderAbstractController {
+@WebServlet(PRINT_ORDER_CONTROLLER)
+public class PrintOrderController extends OrderAbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        var userId = ((User) req.getSession().getAttribute(USER_ATTR)).getId();
-        var orders = orderService.getOrders(userId);
-        req.setAttribute(ORDERS_ATTR, orders);
-        forward(req, resp, ORDERS_JSP);
+       var orderId = req.getParameter(ORDER_ID_ATTR);
+       var receipt = orderService.buildReceipt(orderId);
+       req.setAttribute(RECEIPT_ATTR, receipt);
+       forward(req, resp, RECEIPT_JSP);
     }
 }

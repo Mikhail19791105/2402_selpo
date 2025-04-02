@@ -13,16 +13,6 @@ public class LaptopDao {
     public static final String SELECT_ALL_LAPTOP = "SELECT * FROM laptop";
     public static LaptopDao dao;
 
-    private LaptopDao() {
-        ConnectionManager.init();
-    }
-
-    public static LaptopDao getInstance() {
-        if (dao == null) {
-            dao = new LaptopDao();
-        }
-        return dao;
-    }
 
     public List<Laptop> selectAllLaptops() {
         var laptops = new ArrayList<Laptop>();

@@ -48,7 +48,6 @@
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </form>
-
                     <form method="post" action="<%=CART_CONTROLLER%>">
                         <input type="hidden" name="<%=CART_ACTION_PARAM%>" value="remove">
                         <input type="hidden" name="<%=ITEM_TYPE_PARAM%>" value="${item.itemType}">

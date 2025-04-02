@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="canvas" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="static by.itclass.constants.Constants.*" %>
@@ -22,7 +22,7 @@
             </c:forEach>
         </c:when>
         <c:otherwise>
-            <P>Yor have no orders at the moment</P>
+            <p>Yor have no orders at the moment</p>
         </c:otherwise>
     </c:choose>
 </body>

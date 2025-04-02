@@ -9,20 +9,13 @@ import java.util.Map;
 
 import static by.itclass.constants.Constants.*;
 
-public class LaptopService {
-    private static LaptopService service;
+public class LaptopService implements Service{
     private LaptopDao dao;
 
     public LaptopService() {
-     dao = LaptopDao.getInstance();
+     dao = new  LaptopDao();
     }
 
-    public static LaptopService getInstance() {
-        if (service == null) {
-            service = new LaptopService();
-        }
-        return service;
-    }
 
     public List<Laptop> getLaptops(Map<String, String[]> params) {
         var laptops = dao.selectAllLaptops();

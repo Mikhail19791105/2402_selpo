@@ -281,7 +281,7 @@ body {
 }
 
 /*стили для истории заказа*/
-.order-list-container {
+.order-list-container:hover {
     background-color: lightgray;
 }
 
@@ -293,6 +293,18 @@ body {
     margin: 0 0 20px 20px;
     cursor: pointer;
     border-radius:50px;
-    border-style:solid;
-    border-top-style:solid;
+    border-style:groove;
 }
+
+.receipt-container {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding: 20px;
+    display: inline-block;
+}
+ .receipt-container .underLine {
+     text-decoration: underline;
+ }

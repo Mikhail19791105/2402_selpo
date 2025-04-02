@@ -3,27 +3,19 @@ package by.itclass.model.services;
 import by.itclass.model.dao.TvDao;
 import by.itclass.model.entities.Tv;
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.List;
 import java.util.Map;
 
 import static by.itclass.constants.Constants.*;
 
-public class TvService {
-    private static TvService service;
+public class TvService implements Service{
     private TvDao dao;
 
-    private TvService() {
-        dao = TvDao.getInstance();
+    public TvService() {
+        dao = new TvDao();
     }
 
-    public static TvService getInstance() {
-        if (service == null) {
-            service = new TvService();
-        }
-        return service;
-    }
 
     public List<Tv> getTvs(Map<String, String[]> params) {
         var tvs  = dao.selectAllTv();

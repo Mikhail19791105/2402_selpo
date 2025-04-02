@@ -8,15 +8,7 @@ import java.util.List;
 
 import static by.itclass.constants.Constants.ORDER_ITEMS_ATTR;
 
-public class CartService {
-    private static CartService service;
-
-    public static CartService getInstance() {
-        if (service == null) {
-            service = new CartService();
-        }
-        return service;
-    }
+public class CartService implements Service{
 
     public List<OrderItem> processCart(HttpSession session, String cartAction, OrderItem orderitem) {
         var orderItems = session.getAttribute(ORDER_ITEMS_ATTR);

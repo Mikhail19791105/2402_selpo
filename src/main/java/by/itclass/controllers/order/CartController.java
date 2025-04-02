@@ -1,20 +1,28 @@
 package by.itclass.controllers.order;
 
-import by.itclass.controllers.AbstractController;
+import by.itclass.controllers.abstraction.AbstractController;
 import by.itclass.model.entities.OrderItem;
+import by.itclass.model.services.CartService;
+import by.itclass.model.services.ServiceFactory;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import javax.swing.text.html.HTML;
-
 import java.io.IOException;
 
 import static by.itclass.constants.Constants.*;
+import static by.itclass.model.services.ServiceType.CART_SERVICE;
 
 @WebServlet(CART_CONTROLLER)
 public class CartController extends AbstractController {
+    private CartService cartService;
+
+    @Override
+    public void init() throws ServletException {
+        cartService = (CartService) ServiceFactory.getInstance(CART_SERVICE);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var cartAction = req.getParameter(CART_ACTION_PARAM);

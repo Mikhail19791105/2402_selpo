@@ -13,17 +13,6 @@ public class TvDao {
     public static final String SELECT_ALL_TV = "SELECT * FROM tv";
     private static TvDao dao;
 
-    private TvDao() {
-        ConnectionManager.init();
-    }
-
-    public static TvDao getInstance() {
-        if (dao == null) {
-            dao = new TvDao();
-        }
-        return dao;
-    }
-
     public List<Tv> selectAllTv() {
         var tvs = new ArrayList<Tv>();
         try (var cn = ConnectionManager.getConnection();

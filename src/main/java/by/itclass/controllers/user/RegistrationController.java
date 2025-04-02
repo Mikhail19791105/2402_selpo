@@ -1,19 +1,18 @@
 package by.itclass.controllers.user;
 
-import by.itclass.controllers.AbstractController;
+import by.itclass.controllers.abstraction.UserAbstractController;
 import by.itclass.model.entities.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import javax.print.attribute.standard.MediaSize;
 import java.io.IOException;
 
 import static by.itclass.constants.Constants.*;
 
 @WebServlet(REGISTRATION_CONTROLLER)
-public class RegistrationController extends AbstractController {
+public class RegistrationController extends UserAbstractController {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var name = req.getParameter(NAME_PARAM);
