@@ -15,7 +15,6 @@ import static by.itclass.model.services.ServiceType.TV_SERVICE;
 
 @WebServlet(TV_CONTROLLER)
 public class TvStockController extends AbstractController {
-
     private TvService tvService;
 
     @Override
